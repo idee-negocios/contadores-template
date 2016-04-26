@@ -1,1 +1,97 @@
 {% extends "base.html" %}
+
+{% block section %}Contacto{% endblock %}
+
+{% block content %}
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+    function initialize() {
+        var latLong = new google.maps.LatLng(-32.878351, -68.836388);
+
+        var mapProp = {
+            center: latLong,
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-container"), mapProp);
+
+        var marker = new google.maps.Marker({
+            position: latLong,
+            map: map,
+            title: "Aquí estamos"
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
+            <h1 class="header-title">Contacto</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-8 col-md-offset-2">
+
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <h1>Dirección</h1>
+                <p>Av San Martin 111, Mendoza Capital</p>
+            </div>
+            <div class="thumbnail">
+                <h1>Datos de contacto</h1>
+                <p><strong>Teléfono</strong>: 4111111</p>
+                <p><strong>Email</strong>: hola@hola.com</p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="thumbnail">
+                <h1>Envíanos un mensaje</h1>
+                <form class="form-horizontal" name="commentform">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control"
+                            id="first_name" name="first_name"
+                            placeholder="Nombre"/>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control"
+                            id="last_name" name="last_name"
+                            placeholder="Apellido"/>
+                        </div>
+                        <div class="col-md-4 input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="email" class="form-control" id="email"
+                            name="email" placeholder="Email"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <textarea rows="6" class="form-control"
+                                id="comments" name="comments"
+                                placeholder="Mensaje"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3 col-md-offset-9">
+                            <button type="submit" value="Submit" class="btn
+                                btn-warning pull-right">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div id="map-container" class="col-md-12"></div>
+    </div>
+</div>
+{% endblock %}

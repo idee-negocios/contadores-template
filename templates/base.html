@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Contadores</title>
-    <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Enriqueta' rel='stylesheet' type='text/css'>
-    <!-- Styles -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/css/reset.scss" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" charset="utf-8" />
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Contadores: {% block section %}{% endblock %}</title>
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Enriqueta' rel='stylesheet' type='text/css'>
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
-<body>
+        <link rel="stylesheet" href="/css/reset.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="/css/style.css" type="text/css" charset="utf-8" />
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://brm.io/js/libs/matchHeight/jquery.matchHeight-min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </head>
 
-    <!-- Header and menu -->
-    <div class="row">
-        <div class="jumbotron">
-            <img src="/img/header_background.png" />
-            <h1><a href="/">Contadores S.A.</a></h1>
-        </div>
+    <body>
 
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">INICIO</a></li>
-                        <li><a href="#">QUIÉNES SOMOS</a></li>
-                        <li><a href="#">ÁREA DE COMPETENCIA</a></li>
-                        <li><a href="#">CONTACTO</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    {% block content %}
-    {% endblock %}
-
-    <!-- Footer -->
-    <div class="jumbotron">
+        <!-- Header and menu -->
         <div class="row">
-            <div class="container-fluid">
-                <div class="col-md-2 col-md-offset-3 text-center">
-                    <div class="footer">
-                        <h1>Contáctanos</h1>
-                        <h2>Contadores S.A.</h2>
-                        <ul>
-                            <li>Tel:  <strong>111-111-111</strong></li>
-                            <li>Email:  <strong>hola@hola.com</strong></li>
-                            <li>Dirección:  <strong>Calle Asd 985, Mendoza</strong></li>
+            <div class="jumbotron">
+                <img src="/img/header_background.png" />
+                <h1><a href="/">Contadores S.A.</a></h1>
+            </div>
+
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav menu">
+                            <li><a href="/inicio">INICIO</a></li>
+                            <li><a href="/quienes_somos">QUIÉNES SOMOS</a></li>
+                            <li><a href="/area_competencia">ÁREA DE COMPETENCIA</a></li>
+                            <li><a href="/contacto">CONTACTO</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2 text-center">
-                    <div class="footer">
-                        <h1>Síguenos</h1>
-                        <div class="row">
-                            <div class="col-xs-2">
-                                <img src="/img/facebook.png" />
-                            </div>
-                            <div class="col-xs-2">
-                                <img src="/img/twitter.png" />
-                            </div>
-                            <div class="col-xs-2">
-                                <img src="/img/linkedin.png" />
+            </nav>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <!-- Footer -->
+        <div class="jumbotron">
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="col-md-2 col-md-offset-3 text-center">
+                        <div class="footer">
+                            <h1>Contáctanos</h1>
+                            <h2>Contadores S.A.</h2>
+                            <ul>
+                                <li>Tel:  <strong>111-111-111</strong></li>
+                                <li>Email:  <strong>hola@hola.com</strong></li>
+                                <li>Dirección:  <strong>Calle Asd 985, Mendoza</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="footer">
+                            <h1>Síguenos</h1>
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <img src="/img/facebook.png" />
+                                </div>
+                                <div class="col-xs-2">
+                                    <img src="/img/twitter.png" />
+                                </div>
+                                <div class="col-xs-2">
+                                    <img src="/img/linkedin.png" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="footer">
-                        <h1>Socios</h1>
+                    <div class="col-md-2 text-center">
+                        <div class="footer">
+                            <h1>Socios</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+
+    </body>
 
 </html>

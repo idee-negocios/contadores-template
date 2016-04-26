@@ -23,6 +23,10 @@ $app->get('/', function(Request $request, Response $response) {
     return $this->view->render($response, 'home.html');
 });
 
+$app->get('/inicio', function(Request $request, Response $response) {
+    return $this->view->render($response, 'home.html');
+});
+
 $app->get('/quienes_somos', function(Request $request, Response $response) {
     return $this->view->render($response, 'quienes_somos.html');
 });

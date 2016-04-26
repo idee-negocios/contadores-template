@@ -1,18 +1,24 @@
 {% extends "base.html" %}
 
+{% block section %}Inicio{% endblock %}
+
 {% block content %}
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <div class="header-image">
-            <img src="/img/contadores.jpg" />
+        <div class="col-md-12">
+            <div class="header-image">
+                <img src="/img/contadores.jpg" />
+            </div>
         </div>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <div class="header-image-bottom">
-            <img src="/img/liftedshadow_medium.png" />
+    <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
+            <div class="header-image-bottom">
+                <img src="/img/liftedshadow_medium.png" />
+            </div>
         </div>
     </div>
 </div>
@@ -23,26 +29,25 @@
     <div class="col-md-8 col-md-offset-2">
 
         <div class="col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail info">
                 <h1>Especialistas en Impuestos</h1>
                 <img src="/img/especialistas_impuestos.jpg" />
                 <p>Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
-                <p>Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
-                <button class="btn btn-md">Más</button>
+                <button class="btn btn-xs more">Más</button>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail info">
                 <h1>Nuestro equipo</h1>
                 <img src="/img/nuestro_equipo.jpg" />
                 <p>Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
-                <button class="btn btn-md">Más</button>
+                <button class="btn btn-xs more">Más</button>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail info">
                 <h1>Áreas de Competencia</h1>
                 <ul>
                     <li><span class="glyphicon glyphicon-ok"></span> Impuestos</li>
@@ -54,7 +59,7 @@
                     <li><span class="glyphicon glyphicon-ok"></span> Selección de entidades</li>
                     <li><span class="glyphicon glyphicon-ok"></span> Administración financiera</li>
                 </ul>
-                <button class="btn btn-md">Más</button>
+                <button class="btn btn-xs more">Más</button>
             </div>
         </div>
 
@@ -67,28 +72,35 @@
 
     <div class="col-md-8 col-md-offset-2">
 
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="thumbnail">
                 <h1>Noticias y Publicaciones</h1>
-                <div class="col-md-6">
-                    <div class="post">
-                        <img src="/img/post_1.jpg" />
-                        <p>Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
-                    </div>
-                </div>
+                <ul class="media-list">
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="/img/post_1.jpg" alt="Generic placeholder image">
+                        </a>
+                        <div class="media-body">
+                            <h5 class="media-heading">Publicación 1</h5>
+                            <p>Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="/img/post_2.jpg" alt="Generic placeholder image">
+                        </a>
+                        <div class="media-body">
+                            <h5 class="media-heading">Publicación 2</h5>
+                            <p>Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
+                        </div>
+                    </li>
+                </ul>
 
-                <div class="col-md-6">
-                    <div class="post">
-                        <img src="/img/post_2.jpg" />
-                        <p>Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
-                    </div>
-                </div>
-
-                <button class="btn btn-md">Más</button>
+                <button class="btn btn-xs more">Más</button>
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="thumbnail">
                 <h1>Testimonios</h1>
                 <div id="testomony" class="carousel slide text-center" data-ride="carousel">
@@ -102,16 +114,30 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <h4>"Un gran trabajo con los asientos contables."<br>
-                                    <span style="font-style:normal;">Persona 1</span></h4>
+                            <blockquote class="blockquote">
+                                <p class="m-b-0">Solucionaron diversos problemas
+                                    que nadie más pudo.</p>
+                                <footer class="blockquote-footer">Persona 1 en
+                                    <cite title="Source Title">Empresa A</cite>
+                                </footer>
+                            </blockquote>
                         </div>
                         <div class="item">
-                            <h4>"Gran equipo de trabajo. Muy eficientes."<br>
-                                    <span style="font-style:normal;">Persona 2</span></h4>
+                            <blockquote class="blockquote text-center">
+                                <p class="m-b-0">Gran equipo. Buenos resultados.</p>
+                                <footer class="blockquote-footer">Persona 2 en
+                                    <cite title="Source Title">Empresa B</cite>
+                                </footer>
+                            </blockquote>
                         </div>
                         <div class="item">
-                            <h4>"Muy recomendados. Cumplen."<br>
-                                    <span style="font-style:normal;">Persona 3</span></h4>
+                            <blockquote class="blockquote">
+                                <p class="m-b-0">Trabajo a tiempo. Equipo muy
+                                    eficiente</p>
+                                <footer class="blockquote-footer">Persona 3 en
+                                    <cite title="Source Title">Empresa C</cite>
+                                </footer>
+                            </blockquote>
                         </div>
                     </div>
 
@@ -127,7 +153,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 </div>
